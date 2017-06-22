@@ -30,7 +30,7 @@ router.post('/webhook/', function (req, res) {
       userNamePromise = fb.getUserName(sender);
 
       userNamePromise.then(function(userName) {
-        fb.sendTextMessage(sender, "Thanks for opting in to Beavr Bot, " + userName.first_name + "! Type any message to have it mindlessly echoed back at you, or type 'Generic' (without the quotes) to see something awesome.");
+        fb.sendTextMessage(sender, "Hi there, " + userName.first_name + "! I'm Thomas. I'll repeat things to you or display panels if you type 'Generic'.");
       });
     }
 
