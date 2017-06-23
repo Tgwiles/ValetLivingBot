@@ -42,21 +42,20 @@ router.post('/webhook/', function (req, res) {
       if (text === 'Start') {
         fb.sendStartMessage(sender);
         continue;
-      }
 
-      if (text === 'Help') {
+      } else if (text === 'Help') {
         fb.sendTextMessage(sender, "List of commands: \n 1. Start - Initiate Conversation Flow \n 2. Name - States your name")
         continue;
-      }
 
-      if (text === 'Name') {
+      } else if (text === 'Name') {
         fb.sendTextMessage(sender, "According to Facebook, your name is " + userName.first_name);
         continue;
-      }
 
-      // Failsafe + reminder for anything else
-      fb.sendTextMessage(sender, "I'm sorry, I don't understand that input.\n Remember to type 'Help' for a list of commands or 'Start' to begin the conversation again.");
-      continue;
+      } else {
+        // Failsafe + reminder for anything else
+        fb.sendTextMessage(sender, "I'm sorry, I don't understand that input.\n Remember to type 'Help' for a list of commands or 'Start' to begin the conversation again.");
+        continue;
+      } 
     }
 
     // Handle receipt of a postback
