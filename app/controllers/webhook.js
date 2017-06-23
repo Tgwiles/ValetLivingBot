@@ -49,8 +49,13 @@ router.post('/webhook/', function (req, res) {
         continue;
       }
 
+      if (text === 'Name') {
+        fb.sendTextMessage(sender, "According to Facebook, your name is " + userName.first_name);
+        continue;
+      }
+
       // Failsafe + reminder for anything else
-      fb.sendTextMessage(sender, "I'm sorry, I don't understand that input. Remember to type 'Help' for a list of commands or 'Start' to begin the conversation again.");
+      fb.sendTextMessage(sender, "I'm sorry, I don't understand that input.\n Remember to type 'Help' for a list of commands or 'Start' to begin the conversation again.");
       continue;
     }
 
