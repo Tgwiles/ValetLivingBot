@@ -38,9 +38,9 @@ router.post('/webhook/', function (req, res) {
     if (event.message && event.message.text) {
       text = event.message.text;
 
-      // Handle special keyword 'Generic'
-      if (text === 'Generic') {
-        fb.sendGenericMessage(sender);
+      // Handle special keyword 'Help'
+      if (text === 'Help') {
+        fb.sendHelpMessage(sender);
         continue;
       }
 

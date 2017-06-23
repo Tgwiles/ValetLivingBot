@@ -39,20 +39,20 @@ module.exports = {
     });
   },
 
-  sendGenericMessage: function sendGenericMessage(sender) {
+  sendHelpMessage: function sendHelpMessage(sender) {
     messageData = {
       "attachment": {
         "type": "template",
         "payload": {
           "template_type": "generic",
           "elements": [{
-            "title": "First card",
-            "subtitle": "Element #1 of an hscroll",
+            "title": "Feeling down?",
+            "subtitle": "Option #1",
             "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
             "buttons": [{
               "type": "web_url",
-              "url": "https://www.messenger.com/",
-              "title": "Web url"
+              "url": "http://weavesilk.com/",
+              "title": "Peaceful Website"
             }, {
               "type": "postback",
               "title": "Postback",
@@ -89,3 +89,5 @@ module.exports = {
   }
 
 };
+
+
