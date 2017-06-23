@@ -46,10 +46,12 @@ router.post('/webhook/', function (req, res) {
 
       if (text === 'Help') {
         fb.sendTextMessage(sender, "List of commands: \n 1. Start - Initiate Conversation Flow \n 2. Name - States your name")
+        continue;
       }
 
       // Failsafe + reminder for anything else
       fb.sendTextMessage(sender, "I'm sorry, I don't understand that input. Remember to type 'Help' for a list of commands or 'Start' to begin the conversation again.");
+      continue;
     }
 
     // Handle receipt of a postback
