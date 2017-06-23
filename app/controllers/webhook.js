@@ -30,7 +30,7 @@ router.post('/webhook/', function (req, res) {
       userNamePromise = fb.getUserName(sender);
 
       userNamePromise.then(function(userName) {
-        fb.sendTextMessage(sender, "Hi there, " + userName.first_name + "! I'm Thomas. I'll repeat things to you or display panels if you type 'Generic'.");
+        fb.sendTextMessage(sender, "Hi there, " + userName.first_name + "! I'm Thomas. Type 'Start' to begin a conversation or 'Help' for tips on how I can talk to you.");
       });
     }
 
@@ -44,7 +44,7 @@ router.post('/webhook/', function (req, res) {
         continue;
 
       } else if (text === 'Help') {
-        fb.sendTextMessage(sender, "List of commands: \n 1. Start - Initiate Conversation Flow \n 2. Doug - State a famous quote from the irreplacable Doug Langley");
+        fb.sendTextMessage(sender, "List of commands: \n  1. Start - Initiate Conversation Flow \n  2. Doug - State a famous quote from the irreplacable Doug Langley");
         continue;
 
       } else if (text === 'Doug') {
@@ -53,7 +53,7 @@ router.post('/webhook/', function (req, res) {
 
       } else {
         // Failsafe + reminder for anything else
-        fb.sendTextMessage(sender, "I'm sorry, I don't understand that input.\n Remember to type 'Help' for a list of commands or 'Start' to begin the conversation again.");
+        fb.sendTextMessage(sender, "I'm sorry, I don't understand that input.\nRemember to type 'Help' for a list of commands or 'Start' to begin the conversation again.");
         continue;
       } 
     }
