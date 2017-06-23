@@ -39,7 +39,7 @@ module.exports = {
     });
   },
 
-  sendHelpMessage: function sendHelpMessage(sender) {
+  sendHelpMessage: function sendStartMessage(sender) {
     messageData = {
       "attachment": {
         "type": "template",
