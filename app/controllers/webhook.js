@@ -44,11 +44,7 @@ router.post('/webhook/', function (req, res) {
         continue;
 
       } else if (text === 'Help') {
-        fb.sendTextMessage(sender, "List of commands: \n 1. Start - Initiate Conversation Flow \n 2. Name - States your name")
-        continue;
-
-      } else if (text === 'Name') {
-        fb.sendTextMessage(sender, "According to Facebook, your name is " + userName.first_name);
+        fb.sendTextMessage(sender, "List of commands: \n 1. Start - Initiate Conversation Flow ")
         continue;
 
       } else {
