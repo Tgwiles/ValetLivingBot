@@ -44,7 +44,7 @@ router.post('/webhook/', function (req, res) {
         continue;
 
       } else if (text === 'Help') {
-        fb.sendTextMessage(sender, "List of commands: \n  1. Start - Initiate Conversation Flow \n");
+        fb.sendTextMessage(sender, "List of commands:\n1. Start - Initiate Conversation Flow\n");
         continue;
 
       } else {
