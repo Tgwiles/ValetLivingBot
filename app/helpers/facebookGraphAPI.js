@@ -39,7 +39,7 @@ module.exports = {
     });
   },
 
-  sendStartMessage: function sendStartMessage(sender) {
+  sendGenericMessage: function sendGenericMessage(sender) {
     messageData = {
       "attachment": {
         "type": "template",

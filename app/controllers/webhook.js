@@ -40,15 +40,11 @@ router.post('/webhook/', function (req, res) {
 
       // Handle special keyword 'Help'
       if (text === 'Start') {
-        fb.sendStartMessage(sender);
+        fb.sendGenericMessage(sender);
         continue;
 
       } else if (text === 'Help') {
-        fb.sendTextMessage(sender, "List of commands: \n  1. Start - Initiate Conversation Flow \n  2. Doug - State a famous quote from the irreplacable Doug Langley");
-        continue;
-
-      } else if (text === 'Doug') {
-        fb.sendTextMessage(sender, " 'Please come back, Tom. All I do is sit here and watch the hope fade from my mother's eyes' \n - Doug 2017");
+        fb.sendTextMessage(sender, "List of commands: \n  1. Start - Initiate Conversation Flow \n");
         continue;
 
       } else {
