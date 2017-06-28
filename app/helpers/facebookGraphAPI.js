@@ -41,26 +41,13 @@ module.exports = {
 
   sendGenericMessage: function sendGenericMessage(sender) {
     messageData = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "Feeling down?",
-            "subtitle": "Option #1",
-            "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
-            "buttons": [{
-              "type": "web_url",
-              "url": "http://weavesilk.com/",
-              "title": "Peaceful Website"
-            }, {
-              "type": "postback",
-              "title": "Postback",
-              "payload": "Payload for first element in a generic bubble",
-            }],
-          }]
-        }
-      }
+      text: 'Pick a color:',
+  quick_replies: [
+    { content_type: 'text', title: 'red', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED' },
+    { content_type: 'text', title: 'green', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }
+  ]
+    }
+  }
     };
     request({
       url: 'https://graph.facebook.com/v2.6/me/messages',
@@ -77,8 +64,26 @@ module.exports = {
         console.log('Error: ', response.body.error);
       }
     });
-  }
-
-};
 
 
+ // messageData = {
+    //   "attachment": {
+    //     "type": "template",
+    //     "payload": {
+    //       "template_type": "generic",
+    //       "elements": [{
+    //         "title": "Feeling down?",
+    //         "subtitle": "Option #1",
+    //         "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+    //         "buttons": [{
+    //           "type": "web_url",
+    //           "url": "http://weavesilk.com/",
+    //           "title": "Peaceful Website"
+    //         }, {
+    //           "type": "postback",
+    //           "title": "Postback",
+    //           "payload": "Payload for first element in a generic bubble",
+    //         }],
+    //       }]
+    //     }
+    //   }
