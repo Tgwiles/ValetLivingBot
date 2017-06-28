@@ -77,8 +77,36 @@ module.exports = {
         console.log('Error: ', response.body.error);
       }
     });
+  },
+
+
+
+  sendQuickReply: function sendQuickReply(sender){
+  messageData = {
+    text: 'Pick a color:',
+    quick_replies: [
+      { content_type: 'text', title: 'red', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED' },
+      { content_type: 'text', title: 'green', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }
+    ]
+  }
+  request({
+      url: 'https://graph.facebook.com/v2.6/me/messages',
+      qs: {access_token:config.page_access_token},
+      method: 'POST',
+      json: {
+        recipient: {id:sender},
+        message: messageData,
+      }
+    }, function(error, response, body) {
+      if (error) {
+        console.log('Error sending message: ', error);
+      } else if (response.body.error) {
+        console.log('Error: ', response.body.error);
+      }
+    });
   }
 
 };
+
 
 

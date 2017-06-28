@@ -47,6 +47,10 @@ router.post('/webhook/', function (req, res) {
         fb.sendTextMessage(sender, "List of commands:\n1. Start - Initiate Conversation Flow\n");
         continue;
 
+      } else if (text === 'Quick') {
+        fb.sendQuickReply(sender);
+        continue;
+        
       } else {
         // Failsafe + reminder for anything else
         fb.sendTextMessage(sender, "I'm sorry, I don't understand that input.\nRemember to type 'Help' for a list of commands or 'Start' to begin the conversation again.");
