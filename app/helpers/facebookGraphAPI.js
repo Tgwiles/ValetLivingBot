@@ -85,9 +85,9 @@ module.exports = {
   messageData = {
     text: 'Please choose a department: ',
     quick_replies: [
-      { content_type: 'text', title: 'HR', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED' },
-      { content_type: 'text', title: 'IT', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
-      { content_type: 'text', title: 'Marketing', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }, 
+      { content_type: 'text', title: 'HR', payload: fb.sendTextMessage(sender, "Hey look, you chose HR")},
+      { content_type: 'text', title: 'IT', payload: fb.sendTextMessage(sender, "Hey look, you chose IT") },
+      { content_type: 'text', title: 'Marketing', payload: fb.sendTextMessage(sender, "Hey look, you chose Marketing") }, 
       { content_type: 'text', title: 'Sales', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
       { content_type: 'text', title: 'Business', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
       { content_type: 'text', title: 'I don\'t know all the departments', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }
