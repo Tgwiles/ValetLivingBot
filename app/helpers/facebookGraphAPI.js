@@ -83,10 +83,13 @@ module.exports = {
 
   sendQuickReply: function sendQuickReply(sender){
   messageData = {
-    text: 'Pick a color:',
+    text: 'Please choose a department: ',
     quick_replies: [
-      { content_type: 'text', title: 'red', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED' },
-      { content_type: 'text', title: 'green', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }
+      { content_type: 'text', title: 'HR', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED' },
+      { content_type: 'text', title: 'IT', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
+      { content_type: 'text', title: 'Marketing', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
+      { content_type: 'text', title: 'Sales', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
+      { content_type: 'text', title: 'Business', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }
     ]
   };
   request({
