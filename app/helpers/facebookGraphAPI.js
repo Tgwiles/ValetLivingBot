@@ -92,11 +92,6 @@ module.exports = {
       { content_type: 'text', title: 'Business', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
       { content_type: 'text', title: 'I don\'t know all the departments', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }
     ],
-
-    if (payload = 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED') {
-      fb.sendTextMessage(sender, "Wow, you chose HR!");
-      continue;
-    }
   };
   request({
       url: 'https://graph.facebook.com/v2.6/me/messages',
