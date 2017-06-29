@@ -80,18 +80,23 @@ module.exports = {
   },
 
 
-
+// Sends small button prompts that disappear after the user enters an answer
   sendQuickReply: function sendQuickReply(sender){
   messageData = {
     text: 'Please choose a department: ',
     quick_replies: [
-      { content_type: 'text', title: 'HR', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED' },
+      { content_type: 'text', title: 'HR', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED' },  // Work out how to use payload!!!!
       { content_type: 'text', title: 'IT', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
       { content_type: 'text', title: 'Marketing', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }, 
       { content_type: 'text', title: 'Sales', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
       { content_type: 'text', title: 'Business', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
       { content_type: 'text', title: 'I don\'t know all the departments', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }
-    ]
+    ],
+
+    if (payload = 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED') {
+      fb.sendTextMessage(sender, "Wow, you chose HR!");
+      continue;
+    }
   };
   request({
       url: 'https://graph.facebook.com/v2.6/me/messages',
