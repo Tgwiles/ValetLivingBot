@@ -51,10 +51,6 @@ router.post('/webhook/', function (req, res) {
         fb.sendQuickReply(sender);
         continue;
 
-        } else if (text === 'IT') {
-        fb.sendITReply(sender);
-        continue;
-
       } else {
         // Failsafe + reminder for anything else
         fb.sendTextMessage(sender, "I'm sorry, I don't understand that input.\nRemember to type 'Help' for a list of commands.");
