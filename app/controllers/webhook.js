@@ -44,7 +44,7 @@ router.post('/webhook/', function (req, res) {
         continue;
 
       } else if (text === 'Help') {
-        fb.sendTextMessage(sender, "List of commands:\n1. Start - Begin help questions\n\n Remember you can type category at any point to jump straight to that section!");
+        fb.sendTextMessage(sender, "List of commands:\n1. Start - Begin help questions\n");
         continue;
 
       // } else if (text === 'Generic') {
