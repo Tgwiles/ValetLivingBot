@@ -40,16 +40,16 @@ router.post('/webhook/', function (req, res) {
 
       // Handle special keywords
       if (text === 'Start') {
-        fb.sendGenericMessage(sender);
+        fb.sendQuickReply(sender);
         continue;
 
       } else if (text === 'Help') {
-        fb.sendTextMessage(sender, "List of commands:\n1. Start - Initiate Conversation Flow\n2.Quick - Choose Department");
+        fb.sendTextMessage(sender, "List of commands:\n1. Start - Begin help questions\n\n Remember you can type category at any point to jump straight to that section!");
         continue;
 
-      } else if (text === 'Quick') {
-        fb.sendQuickReply(sender);
-        continue;
+      // } else if (text === 'Generic') {
+      //   fb.sendGenericMessage(sender);
+      //   continue;
 
         } else if (text === 'IT') {
         fb.sendITReply(sender);
