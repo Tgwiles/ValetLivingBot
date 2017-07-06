@@ -85,12 +85,12 @@ module.exports = {
   messageData = {
     text: 'Please choose a department: ',
     quick_replies: [
-      { content_type: 'text', title: 'HR', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED' },  // Work out how to use payload!!!!
-      { content_type: 'text', title: 'IT', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
-      { content_type: 'text', title: 'Marketing', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }, 
-      { content_type: 'text', title: 'Sales', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
-      { content_type: 'text', title: 'Business', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
-      { content_type: 'text', title: 'I don\'t know all the departments', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }
+      { content_type: 'text', title: 'HR', payload: 'PAYLOAD_FOR_OPTION_1' },  // Work out how to use payload!!!!
+      { content_type: 'text', title: 'IT', payload: 'PAYLOAD_FOR_OPTION_2' },
+      { content_type: 'text', title: 'Marketing', payload: 'PAYLOAD_FOR_OPTION_3' }, 
+      { content_type: 'text', title: 'Sales', payload: 'PAYLOAD_FOR_OPTION_4' },
+      { content_type: 'text', title: 'Business', payload: 'PAYLOAD_FOR_OPTION_5' },
+      { content_type: 'text', title: 'I don\'t know all the departments', payload: 'PAYLOAD_FOR_OPTION_6' }
     ],
   };
   request({
@@ -110,16 +110,16 @@ module.exports = {
     });
   },
 
-// Sends small button prompts that disappear after the user enters an answer (Up to 11 button choices)
+// Sends small button prompts that disappear after the user enters an answer (Up to 11 button choices) - 20 char limit per button
   sendITReply: function sendITReply(sender){
-  messageData = {
+  messageData = { 
     text: 'What topic is your question related to?: ',
     quick_replies: [
-      { content_type: 'text', title: 'Login Trouble', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED' },  // Work out how to use payload!!!!
-      { content_type: 'text', title: 'Exporting Docs', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
-      { content_type: 'text', title: 'Laptop issue', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }, 
-      { content_type: 'text', title: 'iPhone/iPad', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
-      { content_type: 'text', title: 'Other', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }
+      { content_type: 'text', title: 'Login Trouble', payload: 'PAYLOAD_FOR_OPTION_1' },  // Work out how to use payload!!!!
+      { content_type: 'text', title: 'Exporting Docs', payload: 'PAYLOAD_FOR_OPTION_2' },
+      { content_type: 'text', title: 'Laptop issue', payload: 'PAYLOAD_FOR_OPTION_3' }, 
+      { content_type: 'text', title: 'iPhone/iPad', payload: 'PAYLOAD_FOR_OPTION_4' },
+      { content_type: 'text', title: 'Other', payload: 'PAYLOAD_FOR_OPTION_5' }
     ],
   };
   request({
