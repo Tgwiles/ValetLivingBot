@@ -118,7 +118,7 @@ module.exports = {
       { content_type: 'text', title: 'Login Trouble', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED' },  // Work out how to use payload!!!!
       { content_type: 'text', title: 'Exporting Docs', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
       { content_type: 'text', title: 'Laptop issue', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }, 
-      { content_type: 'text', title: 'iPod/iPad', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
+      { content_type: 'text', title: 'iPhone/iPad', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' },
       { content_type: 'text', title: 'Other', payload: 'DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN' }
     ],
   };
