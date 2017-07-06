@@ -47,34 +47,15 @@ router.post('/webhook/', function (req, res) {
         case 'Help':
           fb.sendTextMessage(sender, "List of commands:\n1. Start - Begin help questions\n");
           continue;
+
+        case 'IT':
+          fb.sendITReply(sender);
+          continue;
         
         default:
           fb.sendTextMessage(sender, "I'm sorry, I don't understand that input.\nRemember to type 'Help' for a list of commands.");
           continue;
-        }
-
-      // // Handle special keywords
-      // if (text === 'Start') {
-      //   fb.sendQuickReply(sender);
-      //   continue;
-
-      // } else if (text === 'Help') {
-      //   fb.sendTextMessage(sender, "List of commands:\n1. Start - Begin help questions\n");
-      //   continue;
-
-      // // } else if (text === 'Generic') {
-      // //   fb.sendGenericMessage(sender);
-      // //   continue;
-
-      // } else if (text === 'IT') {
-      //   fb.sendITReply(sender);
-      //   continue;
-
-      // } else {
-      //   // Failsafe + reminder for anything else
-      //   fb.sendTextMessage(sender, "I'm sorry, I don't understand that input.\nRemember to type 'Help' for a list of commands.");
-      //   continue;
-      // } 
+      }
     }
 
     // Handle receipt of a postback
