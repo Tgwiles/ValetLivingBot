@@ -62,7 +62,7 @@ router.post('/webhook/', function (req, res) {
           fb.sendTextMessage(sender, "If you have trouble exporting documents, reports, spreadsheets etc, the most common fix is to restart your laptop and change internet browsers (Google Chrome works best with our systems).");
           continue;
 
-        case 'Laptop Issue':
+        case 'Laptop issue':
           fb.sendTextMessage(sender, "If your laptop is running slow and/or says it has low disk space, please contact our IT support (itsupport@valetliving.com) to schedule a time where we can help clear space for you.");
           continue;
         //====================================================================================================================================
