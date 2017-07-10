@@ -118,6 +118,7 @@ module.exports = {
       { content_type: 'text', title: 'Exporting Docs', payload: 'PAYLOAD_FOR_OPTION_2' },
       { content_type: 'text', title: 'Laptop issue', payload: 'PAYLOAD_FOR_OPTION_3' }, 
       { content_type: 'text', title: 'iPhone/iPad', payload: 'PAYLOAD_FOR_OPTION_4' },
+      { content_type: 'text', title: 'Printer', payload: 'PAYLOAD_FOR_OPTION_4' },
       { content_type: 'text', title: 'Other', payload: 'PAYLOAD_FOR_OPTION_5' }
     ],
   };
