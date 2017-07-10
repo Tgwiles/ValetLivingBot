@@ -80,7 +80,7 @@ module.exports = {
   },
 
 
-// Sends small button prompts that disappear after the user enters an answer (Up to 11 button choices)
+// Sends small button prompts that disappear after the user enters an answer (Up to 10 button choices)
   sendQuickReply: function sendQuickReply(sender){
   messageData = {
     text: 'Please choose a department: ',
@@ -90,7 +90,6 @@ module.exports = {
       { content_type: 'text', title: 'Marketing', payload: 'PAYLOAD_FOR_OPTION_3' }, 
       { content_type: 'text', title: 'Sales', payload: 'PAYLOAD_FOR_OPTION_4' },
       { content_type: 'text', title: 'Business', payload: 'PAYLOAD_FOR_OPTION_5' },
-      { content_type: 'text', title: 'I don\'t know all the departments', payload: 'PAYLOAD_FOR_OPTION_6' }
     ],
   };
   request({
@@ -110,7 +109,7 @@ module.exports = {
     });
   },
 
-// Sends small button prompts that disappear after the user enters an answer (Up to 11 button choices) - 20 char limit per button
+// Sends small button prompts that disappear after the user enters an answer (Up to 10 button choices) - 20 char limit per button
   sendITReply: function sendITReply(sender){
   messageData = { 
     text: 'What topic is your question related to?: ',
