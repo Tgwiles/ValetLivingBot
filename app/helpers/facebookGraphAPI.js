@@ -46,13 +46,13 @@ module.exports = {
         "payload": {
           "template_type": "generic",
           "elements": [{
-            "title": "Feeling down?",
+            "title": "Check out our website!",
             "subtitle": "Option #1",
             "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
             "buttons": [{
               "type": "web_url",
-              "url": "http://weavesilk.com/",
-              "title": "Peaceful Website"
+              "url": "http://www.valetliving.com",
+              "title": "ValetLiving"
             }, {
               "type": "postback",
               "title": "Postback",
@@ -89,7 +89,10 @@ module.exports = {
       { content_type: 'text', title: 'IT', payload: 'PAYLOAD_FOR_OPTION_2' },
       { content_type: 'text', title: 'Marketing', payload: 'PAYLOAD_FOR_OPTION_3' }, 
       { content_type: 'text', title: 'Sales', payload: 'PAYLOAD_FOR_OPTION_4' },
-      { content_type: 'text', title: 'Business', payload: 'PAYLOAD_FOR_OPTION_5' },
+      { content_type: 'text', title: 'Business Development', payload: 'PAYLOAD_FOR_OPTION_5' },
+      { content_type: 'text', title: 'ValetLiving Turns', payload: 'PAYLOAD_FOR_OPTION_5' },
+      { content_type: 'text', title: 'Support', payload: 'PAYLOAD_FOR_OPTION_5' },
+      { content_type: 'text', title: 'Finance', payload: 'PAYLOAD_FOR_OPTION_5' }
     ],
   };
   request({
@@ -118,8 +121,8 @@ module.exports = {
       { content_type: 'text', title: 'Exporting', payload: 'PAYLOAD_FOR_OPTION_2' },
       { content_type: 'text', title: 'Laptop issue', payload: 'PAYLOAD_FOR_OPTION_3' }, 
       { content_type: 'text', title: 'iPhone/iPad', payload: 'PAYLOAD_FOR_OPTION_4' },
-      { content_type: 'text', title: 'Printer', payload: 'PAYLOAD_FOR_OPTION_4' },
-      { content_type: 'text', title: 'Other', payload: 'PAYLOAD_FOR_OPTION_5' }
+      { content_type: 'text', title: 'Printer', payload: 'PAYLOAD_FOR_OPTION_5' },
+      { content_type: 'text', title: 'Other', payload: 'PAYLOAD_FOR_OPTION_6' }
     ],
   };
   request({

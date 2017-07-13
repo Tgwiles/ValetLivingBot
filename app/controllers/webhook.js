@@ -48,13 +48,16 @@ router.post('/webhook/', function (req, res) {
           fb.sendTextMessage(sender, "List of commands:\n1. Start - Begin help questions\n");
           continue;
 
+        case 'Generic':
+          fb.sendGenericMessage(sender);
+          continue;
+
         //All responses related to Information Technology ===================================================================================
         case 'IT':
           fb.sendITReply(sender);
           continue;
 
-        
-        case 'Login Trouble':               
+        case 'Login Trouble':
           fb.sendTextMessage(sender, "If you are experiencing login issues related to Workday or Concur, please reach out to (email address)");
           continue;
 
@@ -65,7 +68,7 @@ router.post('/webhook/', function (req, res) {
         case 'Laptop issue':
           fb.sendTextMessage(sender, "If your laptop is running slow and/or says it has low disk space, please contact our IT support (itsupport@valetliving.com) to schedule a time where we can help clear space for you.");
           continue;
-        //====================================================================================================================================
+        //===================================================================================================================================
         
         default:
           fb.sendTextMessage(sender, "I'm sorry, I don't understand that input.\nRemember to type 'Help' for a list of commands.");
