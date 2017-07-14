@@ -81,7 +81,7 @@ module.exports = {
 
  sendStartReply: function sendStartReply(sender){
   messageData = {
-    text: ('What would you like help with, ' + fb.getUserName + '?'),
+    text: ('What would you like help with?'),
     quick_replies: [
       { content_type: 'text', title: 'Payment Help', payload: 'PAYLOAD_FOR_OPTION_1' },  // Work out how to use payload!!!!
       { content_type: 'text', title: 'Available Resources', payload: 'PAYLOAD_FOR_OPTION_2' },

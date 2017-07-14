@@ -38,6 +38,8 @@ router.post('/webhook/', function (req, res) {
     if (event.message && event.message.text) {
       text = event.message.text;
 
+
+      // NOTE: BUTTON ANSWERS ARE RECOGNIZED VIA THEIR STRING, NOT BY THEIR PAYLOAD (ie. You cannot have multiple buttons that contanin the same string but point to different responses)
       switch(text) {
 
         case 'Start':
