@@ -79,9 +79,35 @@ module.exports = {
     });
   },
 
+ sendStartReply: function sendStartReply(sender){
+  messageData = {
+    text: ('What would you like help with, ' + fb.getUserName + '?'),
+    quick_replies: [
+      { content_type: 'text', title: 'Payment Help', payload: 'PAYLOAD_FOR_OPTION_1' },  // Work out how to use payload!!!!
+      { content_type: 'text', title: 'Available Resources', payload: 'PAYLOAD_FOR_OPTION_2' },
+      { content_type: 'text', title: 'Search by Department', payload: 'PAYLOAD_FOR_OPTION_5' }
+    ],
+  };
+  request({
+      url: 'https://graph.facebook.com/v2.6/me/messages',
+      qs: {access_token:config.page_access_token},
+      method: 'POST',
+      json: {
+        recipient: {id:sender},
+        message: messageData,
+      }
+    }, function(error, response, body) {
+      if (error) {
+        console.log('Error sending message: ', error);
+      } else if (response.body.error) {
+        console.log('Error: ', response.body.error);
+      }
+    });
+  },
 
-// Sends small button prompts that disappear after the user enters an answer (Up to 10 button choices)
-  sendQuickReply: function sendQuickReply(sender){
+
+  // Sends small button prompts that disappear after the user enters an answer (Up to 10 button choices)
+  sendDepartmentReply: function sendDepartmentReply(sender){
   messageData = {
     text: 'Please choose a department: ',
     quick_replies: [
