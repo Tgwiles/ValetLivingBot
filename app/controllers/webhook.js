@@ -72,8 +72,8 @@ router.post('/webhook/', function (req, res) {
           continue;
 
         case 'Laptop issue':
-        fb.sendTextMessage(sender, "If you believe you have a hardware issue with your computer, send a message to our support email and try to best describe your problem so that we may see how we can assist you.");
           fb.sendTextMessage(sender, "If your laptop is running slow and/or says it has low disk space, please contact our IT support (itsupport@valetliving.com) to schedule a time where we can help clear space for you.");
+          fb.sendTextMessage(sender, "If you believe you have a hardware issue with your computer, send a message to our support email and try to best describe your problem so that we may see how we can assist you.");
           continue;
         
         case 'Printer':
