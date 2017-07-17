@@ -1,1 +1,3 @@
-﻿This is a bot for Thomas. Thomas is the owner of this bot. 
+﻿ERROR LOG:
+
+Please note on 7/17/17, when returning to office from the weekend, I messaged the bot on facebook and its settings seemed to be completely reverted back to when the original tutorial file was downloaded. Every message sent was simply echoed and returned (the default functionality of the bot before any changes I made). This was fixed by simply adding a small update to my files and pushing the new changes to the master branch, but it is worth noting the error, and that it may happen again. 
