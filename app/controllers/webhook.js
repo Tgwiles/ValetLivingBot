@@ -50,6 +50,10 @@ router.post('/webhook/', function (req, res) {
           fb.sendTextMessage(sender, "List of commands:\n1. Start - Begin help questions\n");
           continue;
 
+        case 'Search by Department':
+          fb.sendDepartmentReply(sender);
+          continue;
+
         case 'Generic':
           fb.sendGenericMessage(sender);
           continue;
@@ -70,10 +74,12 @@ router.post('/webhook/', function (req, res) {
         case 'Laptop issue':
           fb.sendTextMessage(sender, "If your laptop is running slow and/or says it has low disk space, please contact our IT support (itsupport@valetliving.com) to schedule a time where we can help clear space for you.");
           continue;
-        //===================================================================================================================================
-        case 'Search by Department':
-          fb.sendDepartmentReply(sender);
+        
+        case 'Printer':
+          fb.sendTextMessage(sender, "To set up a new printer, an IT member will need to download and install the latest driver for your specific printer, please contact itsupport@valetliving.com to set up a time.");
           continue;
+        //===================================================================================================================================
+        
         
         default:
           fb.sendTextMessage(sender, "I'm sorry, I don't understand that input.\nRemember to type 'Help' for a list of commands.");

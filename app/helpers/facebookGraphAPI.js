@@ -141,7 +141,7 @@ module.exports = {
 // Sends small button prompts that disappear after the user enters an answer (Up to 10 button choices) - 20 char limit per button
   sendITReply: function sendITReply(sender){
   messageData = { 
-    text: 'What topic is your question related to?: ',
+    text: 'What topic is your question related to?',
     quick_replies: [
       { content_type: 'text', title: 'Login Trouble', payload: 'PAYLOAD_FOR_OPTION_1' },  // Work out how to use payload!!!!
       { content_type: 'text', title: 'Exporting', payload: 'PAYLOAD_FOR_OPTION_2' },
