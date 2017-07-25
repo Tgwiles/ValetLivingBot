@@ -54,9 +54,9 @@ router.post('/webhook/', function (req, res) {
           fb.sendDepartmentReply(sender);
           continue;
 
-        case 'Generic':
-          fb.sendGenericMessage(sender);
-          continue;
+        // case 'Generic':
+        //   fb.sendGenericMessage(sender);
+        //   continue;
 
         //All responses related to Information Technology ===================================================================================
         case 'IT':
